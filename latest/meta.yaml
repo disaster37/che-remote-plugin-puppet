@@ -1,5 +1,5 @@
 id: jpogran.puppet-vscode
-version: 1.31.1
+version: latest
 type: VS Code extension
 name: Puppet
 title: Puppet extension for Visual Studio Code

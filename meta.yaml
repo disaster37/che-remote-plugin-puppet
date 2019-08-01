@@ -1,0 +1,10 @@
+id: jpogran.puppet-vscode
+version: 1.31.1
+type: VS Code extension
+name: Puppet
+title: Puppet extension for Visual Studio Code
+description: Puppet extension for VsCode https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode#requirements
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+attributes:
+  extension: "vscode:extension/jpogran.puppet-vscode"
+  container-image: "webcenter/che-remote-plugin-puppet" 

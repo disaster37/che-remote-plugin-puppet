@@ -1,5 +1,5 @@
 apiVersion: v2
-publisher: langoureaux-s
+publisher: jpogran
 name: puppet-vscode
 version: latest
 type: VS Code extension

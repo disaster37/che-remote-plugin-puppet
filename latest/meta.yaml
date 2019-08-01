@@ -1,10 +1,19 @@
-id: jpogran.puppet-vscode
+apiVersion: v2
+publisher: langoureaux-s
+name: jpogran.puppet-vscode
 version: latest
 type: VS Code extension
-name: Puppet
+displayName: Puppet extension for Visual Studio Code
 title: Puppet extension for Visual Studio Code
-description: Puppet extension for VsCode https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode#requirements
+description: This VS Code extension provides support for Puppet https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode#requirements
 icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
-attributes:
-  extension: "vscode:extension/jpogran.puppet-vscode"
-  container-image: "webcenter/che-remote-plugin-puppet" 
+repository: https://github.com/lingua-pupuli/puppet-vscode
+category: Language
+firstPublicationDate: '2019-08-01'
+spec:
+  containers:
+  - image: webcenter/che-remote-plugin-puppet:latest
+    name: vscode-puppet
+    memoryLimit: "512Mi"
+  extensions:
+  - https://github.com/lingua-pupuli/puppet-vscode/releases/download/0.18.1/puppet-vscode-0.18.1.vsix

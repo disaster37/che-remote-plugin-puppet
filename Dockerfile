@@ -1,4 +1,4 @@
-FROM eclipse/che-theia-endpoint-runtime
+FROM eclipse/che-theia-endpoint-runtime:7.0.0-next
 
 MAINTAINER Sebastien LANGOUREAUX <linuxworkgroup@hotmail.com>
 

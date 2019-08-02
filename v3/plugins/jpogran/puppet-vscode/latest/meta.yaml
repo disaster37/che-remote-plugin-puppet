@@ -14,5 +14,4 @@ spec:
   - image: webcenter/che-remote-plugin-puppet:latest
     memoryLimit: "512Mi"
   extensions:
-  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jpogran/vsextensions/puppet-vscode/0.19.0/vspackage
-  - https://github.com/redhat-developer/vscode-yaml/releases/download/0.4.0/redhat.vscode-yaml-0.4.0.vsix
+  - vscode:extension/jpogran.puppet-vscode

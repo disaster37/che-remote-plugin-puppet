@@ -1,4 +1,4 @@
-FROM wsskeleton/theia-endpoint-runtime
+FROM eclipse/che-theia-endpoint-runtime
 
 MAINTAINER Sebastien LANGOUREAUX <linuxworkgroup@hotmail.com>
 

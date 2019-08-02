@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: v3
 publisher: jpogran
 name: puppet-vscode
 version: latest
@@ -9,11 +9,10 @@ description: This VS Code extension provides support for Puppet https://marketpl
 icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
 repository: https://github.com/lingua-pupuli/puppet-vscode
 category: Language
-firstPublicationDate: '2019-08-01'
 spec:
   containers:
   - image: webcenter/che-remote-plugin-puppet:latest
-    name: vscode-puppet
     memoryLimit: "512Mi"
   extensions:
   - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jpogran/vsextensions/puppet-vscode/0.19.0/vspackage
+  - https://github.com/redhat-developer/vscode-yaml/releases/download/0.4.0/redhat.vscode-yaml-0.4.0.vsix

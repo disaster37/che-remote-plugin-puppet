@@ -11,8 +11,7 @@ RUN \
     cd /tmp &&\
     git clone https://github.com/puppetlabs/puppet &&\
     cd puppet &&\
-    ./install.rb --bindir=/opt/puppetlabs/puppet/bin --configdir=/etc/puppetlabs/puppet --sitelibdir=/usr/lib/ruby/vendor_ruby --codedir=/et
-c/puppetlabs/code --vardir=/opt/puppetlabs/puppet/cache --logdir=/var/log/puppetlabs/puppet --rundir=/var/run/puppetlabs --quick &&\
+    ./install.rb --bindir=/opt/puppetlabs/puppet/bin --configdir=/etc/puppetlabs/puppet --sitelibdir=/usr/lib/ruby/vendor_ruby --codedir=/etc/puppetlabs/code --vardir=/opt/puppetlabs/puppet/cache --logdir=/var/log/puppetlabs/puppet --rundir=/var/run/puppetlabs --quick &&\
     ln -s /usr/lib/ruby/gems/2.5.0/gems/hiera-3.5.0/bin/hiera /opt/puppetlabs/puppet/bin/ &&\
     export PATH="/opt/puppetlabs/bin:$PATH" &&\
     puppet config set confdir /etc/puppetlabs/puppet && \

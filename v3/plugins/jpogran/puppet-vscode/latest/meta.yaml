@@ -15,4 +15,4 @@ spec:
     memoryLimit: "512Mi"
     name: vscode-puppet
   extensions:
-  - https://github.com/lingua-pupuli/puppet-vscode/releases/download/0.18.1/puppet-vscode-0.18.1.vsix
+  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jpogran/vsextensions/puppet-vscode/0.19.0/vspackage

@@ -13,5 +13,6 @@ spec:
   containers:
   - image: webcenter/che-remote-plugin-puppet:latest
     memoryLimit: "512Mi"
+    name: vscode-puppet
   extensions:
-  - vscode:extension/jpogran.puppet-vscode
+  - https://github.com/lingua-pupuli/puppet-vscode/releases/download/0.18.1/puppet-vscode-0.18.1.vsix

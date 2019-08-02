@@ -1,4 +1,4 @@
-FROM alpine:3.8 as build
+FROM alpine:3.9.4 as build
 
 RUN apk add --no-cache cmake boost-dev make curl git curl-dev ruby ruby-dev gcc g++ yaml-cpp-dev jq openjdk8
 
@@ -166,7 +166,8 @@ RUN apk add --no-cache \
     boost-filesystem \
     boost-prg_exec_monitor \
     boost-regex \
-    boost-thread
+    boost-thread \
+    boost-dev
 
 COPY --from=build /usr/lib/ruby/vendor_ruby /usr/lib/ruby/vendor_ruby
 COPY --from=build /etc/puppetlabs /etc/puppetlabs

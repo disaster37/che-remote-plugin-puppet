@@ -6,8 +6,8 @@ ARG http_proxy
 ARG https_proxy
 
 ENV \
-    USER=user \
-    GROUP=user \
+    USER=theia \
+    GROUP=theia \
     USER_ID=1724 \
     GROUP_ID=1724
 

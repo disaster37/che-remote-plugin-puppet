@@ -15,4 +15,4 @@ spec:
     memoryLimit: "512Mi"
     name: vscode-puppet
   extensions:
-  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jpogran/vsextensions/puppet-vscode/0.19.0/vspackage
+  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/jpogran/vsextensions/puppet-vscode/0.21.0/vspackage

@@ -7,6 +7,15 @@ ARG https_proxy
 
 ENV HOME=/home/theia
 
+# Require for CHE
+# Change permissions to let any arbitrary user
+RUN mkdir /projects ${HOME} && \
+    for f in "${HOME}" "/etc/passwd" "/projects"; do \
+      echo "Changing permissions on ${f}" && chgrp -R 0 ${f} && \
+      chmod -R g+rwX ${f}; \
+    done
+ADD etc/entrypoint.sh /entrypoint.sh
+
 
 # Install puppet and PDK
 RUN \
@@ -18,14 +27,7 @@ RUN \
     echo "disabled: true" >> /home/theia/.config/puppet/analytics.yml
 
 
-# Require for CHE
-# Change permissions to let any arbitrary user
-RUN mkdir /projects ${HOME} && \
-    for f in "${HOME}" "/etc/passwd" "/projects"; do \
-      echo "Changing permissions on ${f}" && chgrp -R 0 ${f} && \
-      chmod -R g+rwX ${f}; \
-    done
-ADD etc/entrypoint.sh /entrypoint.sh
+
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}

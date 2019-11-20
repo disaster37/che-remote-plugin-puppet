@@ -5,6 +5,8 @@ MAINTAINER Sebastien LANGOUREAUX <linuxworkgroup@hotmail.com>
 ARG http_proxy
 ARG https_proxy
 
+ENV HOME=/home/theia
+
 
 # Install puppet and PDK
 RUN \
@@ -16,6 +18,13 @@ RUN \
     echo "disabled: true" >> /home/theia/.config/puppet/analytics.yml
 
 
+# Require for CHE
+# Change permissions to let any arbitrary user
+RUN mkdir /projects ${HOME} && \
+    for f in "${HOME}" "/etc/passwd" "/projects"; do \
+      echo "Changing permissions on ${f}" && chgrp -R 0 ${f} && \
+      chmod -R g+rwX ${f}; \
+    done
 ADD etc/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]

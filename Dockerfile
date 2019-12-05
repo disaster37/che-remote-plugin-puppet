@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM centos:8
 
 MAINTAINER Sebastien LANGOUREAUX <linuxworkgroup@hotmail.com>
 
@@ -19,9 +19,10 @@ ADD etc/entrypoint.sh /entrypoint.sh
 
 # Install puppet and PDK
 RUN \
-    apk add --update --no-cache build-base libffi-dev ruby-dev ruby-full ruby ruby-nokogiri git sudo &&\
-    gem install pdk puppet puppet-validator puppet-lint &&\
-    cd /tmp &&\
+    rpm -Uvh https://yum.puppet.com/puppet6-release-el-8.noarch.rpm &&\
+    yum install -y pdk git puppet-agent sudo &&\
+    /opt/puppetlabs/puppet/bin/gem install puppet-lint &&\
+    yum clean all &&\
     mkdir -p /home/theia/.config/puppet &&\
     echo "---" > /home/theia/.config/puppet/analytics.yml &&\
     echo "disabled: true" >> /home/theia/.config/puppet/analytics.yml
